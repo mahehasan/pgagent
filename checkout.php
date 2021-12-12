@@ -7,10 +7,10 @@ if (isset($_POST['formName'])){
 			 $randomString .= $characters[rand(0, $charactersLength - 1)];
 		}
 		$SensitiveData = array(
-      'clientId'=>'1-11122021'
+      'clientId'=>'1-11122021',
       'orderId' => $randomString,
       'amount' => $_POST['amount'],
-      'client_callback_url' => 'http://localhost:81/trvzoo/client_callback.php',
+      'client_callback_url' => 'http://localhost:81/trvzoo/zoofamily_callback.php',
       'bill_to_forename' => $_POST['bill_to_forename'],
       'bill_to_surname' => $_POST['bill_to_surname'],
       'bill_to_email' => $_POST['bill_to_email'],
