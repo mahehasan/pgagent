@@ -10,12 +10,13 @@ if (isset($_POST['formName'])){
       'clientId'=>'1-11122021',
       'orderId' => $randomString,
       'amount' => $_POST['amount'],
-      'client_callback_url' => 'http://localhost:81/trvzoo/zoofamily_callback.php',
+      'client_callback_url' => 'http://localhost/pgagent/zoofamily_callback.php',
       'bill_to_forename' => $_POST['bill_to_forename'],
       'bill_to_surname' => $_POST['bill_to_surname'],
       'bill_to_email' => $_POST['bill_to_email'],
       'bill_to_phone' => $_POST['bill_to_phone'],
       'bill_to_address_line1' => $_POST['bill_to_address_line1'],
+      'bill_to_address_line2' => $_POST['bill_to_address_line2'],
       'bill_to_address_city' => $_POST['bill_to_address_city'],
       'bill_to_address_country' => $_POST['bill_to_address_country'],
       'bill_to_postal_code' => $_POST['bill_to_postal_code'],
@@ -116,7 +117,7 @@ if (isset($_POST['formName'])){
 
             <div class="mb-3">
               <label for="address2">Address 2 <span class="text-muted">(Optional)</span></label>
-              <input type="text" name = "bill_to_address_line2" class="form-control" id="address2" placeholder="Apartment or suite">
+              <input type="text" name = "bill_to_address_line2" class="form-control" id="address2" value="Road No - 32" placeholder="Apartment or suite">
             </div>
             <div class="row">
               <div class="col-md-5 mb-3">
@@ -128,14 +129,14 @@ if (isset($_POST['formName'])){
                </div>
               <div class="col-md-4 mb-3">
                 <label for="state">City</label>
-                <input type="text" name = "bill_to_address_country" class="form-control" value="" id="bill_to_address_country" placeholder="City">
+                <input type="text" name = "bill_to_address_city" class="form-control" value="Dhaka" id="bill_to_address_city" placeholder="City">
                 <div class="invalid-feedback">
                   City  required.
                 </div>
                </div>
               <div class="col-md-3 mb-3">
                 <label for="zip">Postal Code</label>
-                <input type="text" class="form-control" name="bill_to_postal_code" id="bill_to_postal_code" value="1212" placeholder="" required>
+                <input type="text" class="form-control" name="bill_to_postal_code" id="bill_to_postal_code" value="1202" placeholder="" required>
                 <div class="invalid-feedback">
                   Postal code required.
                 </div>
